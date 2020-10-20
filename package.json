@@ -1,0 +1,21 @@
+{
+  "name": "bash-scripts",
+  "version": "1.0.0",
+  "description": "🙈 Collect all of the bash commands made the work be happiness 🙈",
+  "main": "index.js",
+  "scripts": {
+    "currentBranch": "sh ./scripts/gits/current-branch.sh",
+    "auto-tag": "sh ./scripts/gits/auto-tag.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rain120/bash-scripts.git"
+  },
+  "keywords": [],
+  "author": "Rain120",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rain120/bash-scripts/issues"
+  },
+  "homepage": "https://github.com/Rain120/bash-scripts#readme"
+}
