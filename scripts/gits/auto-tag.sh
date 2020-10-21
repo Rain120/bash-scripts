@@ -91,7 +91,7 @@ echo "${VERSION} will be the current tag version"
 
 read -p "Tag Message(short decsription + card url): " TAG_MESSAGE
 
-git tag -a $VERSION -m $TAG_MESSAGE || exit 1
+git tag -a $VERSION -m "${TAG_MESSAGE}" || exit 1
 
 git push origin $VERSION
 
