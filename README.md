@@ -24,12 +24,12 @@ Welcome to the Node Bash Scripts.
 
 ##### Git
 
-- [x] [Current Branch](./scripts/gits/current-branch.sh)
+- [x] [Current Branch](./scripts/git/current-branch.sh)
   ```sh
   npm run currentBranch
   npm run currentBranch <branch-name>
   ```
-- [x] [Auto Tag](./scripts/gits/auto-tag.sh)
+- [x] [Auto Tag](./scripts/git/auto-tag.sh)
   ```sh
   npm run auto-tag
   npm run auto-tag <branch-name>
