@@ -1,17 +1,17 @@
 #! /bin/bash
 ###
- # AUTO_VERSION
+ # AUTO_INCREASING
  #   -> used v(major.minor.build), auto increasing one number which you used version type
  #   -> default 0.0.0
  # customVersion -> used v(customVersion)
 ### 
 echo "--------------------------- Please Checked your current branch was clean !!!! ---------------------------"
 
-read -p "Auto Increasing(Y/y | N/n): " AUTO_VERSION
+read -p "Auto Increasing(Y/y | N/n): " AUTO_INCREASING
 
-if [[ $AUTO_VERSION = "Y" || $AUTO_VERSION = "y" ]]; then
+if [[ $AUTO_INCREASING = "Y" || $AUTO_INCREASING = "y" ]]; then
     read -p "Usage major|minor|build(default build): " VERSION_TYPE
-    if [ -e $CURRENT_VERSION ]; then
+    if [ -e $VERSION_TYPE ]; then
         VERSION_TYPE="build"
     fi
 
@@ -76,7 +76,7 @@ echo "Checkout Branch is ${checkoutBranch}"
 git checkout $checkoutBranch || exit 1
 
 # current bug all of tags
-git fetch --tags
+git fetch --tags || exit 1
 
 # echo "All of tag list"
 # git tag -l -n
@@ -93,6 +93,6 @@ read -p "Tag Message(short decsription + card url): " TAG_MESSAGE
 
 git tag -a $VERSION -m "${TAG_MESSAGE}" || exit 1
 
-git push origin $VERSION
+git push origin $VERSION || exit 1
 
 echo "--------------------------- Tag has Pushed !!!! ---------------------------"
